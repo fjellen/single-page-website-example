@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 64px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 100px;
+    color: white;
+}
+
+@keyframes bg-animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.fullscreen-banner {
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: bg-animate 2s infinite alternate;
+    background-size: 200%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.banner-fade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    z-index: 1;
+}
+
+.banner-arrow-down {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 280px) {
+    * {
+        font-size: 1rem;
+    }
+}
+
+.website-content {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+@media (max-width: 768px) {
+    .website-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .website-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .website-content {
+        width: 90%;
+    }
+}
+
+h2+p {
+    margin-top: 1rem;
+}
+
+p+.button {
+    margin-top: 1rem;
+}
+
+
+.button {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: transparent;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: black;
+    color: black;
+    transition: background-color .2s;
+}
+
+input.button {
+    border: none;
+    outline: none;
+    font-size: 100%;
+}
+
+.form-wrapper {
+    width: 40%;
+}
+
+@media (max-width: 414px) {
+    .form-wrapper {
+        width: 100%;
+    }
+}
+
+form input[type="text"], form textarea {
+    display: block;
+}
+
+form input[type="text"], form textarea {
+    border: none;
+    outline: none;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+}
+
+form textarea {
+    height: 96px;
+}
+
+form input, form textarea {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-padding-top {
+    padding-top: 0px;
+}
+
+.headline {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+footer {
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+footer a i {
+    font-size: 1.2rem;
+}
